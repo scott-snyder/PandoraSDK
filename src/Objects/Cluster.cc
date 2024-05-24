@@ -525,7 +525,7 @@ void Cluster::UpdatePhotonIdCache(const Pandora &pandora) const
 {
     const bool passPhotonId(pandora.GetPlugins()->GetParticleId()->IsPhoton(this));
 
-    if (!(m_passPhotonId = passPhotonId))
+    if ((m_passPhotonId = passPhotonId) == 0)
         throw StatusCodeException(STATUS_CODE_FAILURE);
 }
 
@@ -538,7 +538,7 @@ void Cluster::UpdateShowerLayerCache(const Pandora &pandora) const
     unsigned int showerStartLayer(std::numeric_limits<unsigned int>::max());
     pShowerProfilePlugin->CalculateShowerStartLayer(this, showerStartLayer);
 
-    if (!(m_showerStartLayer = showerStartLayer))
+    if ((m_showerStartLayer = showerStartLayer) == 0)
         throw StatusCodeException(STATUS_CODE_FAILURE);
 }
 

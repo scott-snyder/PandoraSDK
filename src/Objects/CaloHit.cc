@@ -146,7 +146,7 @@ StatusCode CaloHit::AlterMetadata(const object_creation::CaloHit::Metadata &meta
 
 StatusCode CaloHit::SetPseudoLayer(const unsigned int pseudoLayer)
 {
-    if (!(m_pseudoLayer = pseudoLayer))
+    if ((m_pseudoLayer = pseudoLayer) == 0)
         return STATUS_CODE_NOT_INITIALIZED;
 
     return STATUS_CODE_SUCCESS;
