@@ -411,7 +411,7 @@ inline void ClusterFitResult::SetIntercept(const CartesianVector &intercept)
 
 inline void ClusterFitResult::SetChi2(const float chi2)
 {
-    if (!(m_chi2 = chi2))
+    if ((m_chi2 = chi2) == 0)
         throw StatusCodeException(STATUS_CODE_INVALID_PARAMETER);
 }
 
@@ -419,7 +419,7 @@ inline void ClusterFitResult::SetChi2(const float chi2)
 
 inline void ClusterFitResult::SetRms(const float rms)
 {
-    if (!(m_rms = rms))
+    if ((m_rms = rms) == 0)
         throw StatusCodeException(STATUS_CODE_INVALID_PARAMETER);
 }
 
@@ -427,7 +427,7 @@ inline void ClusterFitResult::SetRms(const float rms)
 
 inline void ClusterFitResult::SetRadialDirectionCosine(const float radialDirectionCosine)
 {
-    if (!(m_dirCosR = radialDirectionCosine))
+    if ((m_dirCosR = radialDirectionCosine) == 0)
         throw StatusCodeException(STATUS_CODE_INVALID_PARAMETER);
 }
 
