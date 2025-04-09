@@ -1,8 +1,0 @@
-Bottom: 987eb071bc2243e273b0c9e8ec228af6e7a1e0ad
-Top:    987eb071bc2243e273b0c9e8ec228af6e7a1e0ad
-Author: scott snyder <sss@karma>
-Date:   2025-04-09 16:42:33 -0400
-
-Fix warnings that were causing compilation to fail.
-
-Assignments used as truth values.
