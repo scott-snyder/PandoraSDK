@@ -128,7 +128,7 @@ public:
     /**
      *  @brief  Constructor
      */
-    ~StatusCodeException() throw();
+    ~StatusCodeException() noexcept;
 
     /**
      *  @brief  Get status code
@@ -182,7 +182,7 @@ inline StatusCodeException::StatusCodeException(const StatusCode statusCode) :
 
 //------------------------------------------------------------------------------------------------------------------------------------------
 
-inline StatusCodeException::~StatusCodeException() throw()
+inline StatusCodeException::~StatusCodeException() noexcept
 {
 }
 
